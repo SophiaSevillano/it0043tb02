@@ -1,10 +1,3 @@
-.body {
-    width: 70vw;
-    height: 80vh;
-    margin: 2em auto;
-    align-items: center;
-}
-
 body {
     text-align: center;
     background-image: url("feu-bg.png");
@@ -12,9 +5,17 @@ body {
     font-family: Radio Canada Big;
 }
 
+.container {
+    width: 70vw;
+    height: 80vh;
+    margin: 2em auto;
+}
+
 .img {
-    transform: scale(1.15, 1.15);
     text-align: left;
+    max-width: 20%;
+    max-height: 20%;
+   padding-right: 3000px;
 }
 
 h1 {
@@ -48,12 +49,11 @@ p {
     background-color: yellow;
     color: green;
     padding: 0 2rem 0 2rem;
-    font-family:Lato;
-    
+    font-family: Lato;
+
 }
 
 .tag {
-    
     text-align: right;
     font-style: italic;
     background-color: green;
@@ -61,9 +61,9 @@ p {
     font-size: 1rem;
     padding: 0 2rem 0 2rem;
     align-self: flex-end;
-    font-family:Lato;
+    font-family: Lato;
 }
 
 .right {
     box-shadow: 10px 10px 5px black;
-  }
+}
