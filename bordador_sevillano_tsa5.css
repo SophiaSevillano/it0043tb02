@@ -21,12 +21,13 @@ body{
 .card{
     text-align: center;
     padding: 5px;
-    margin: 10px;
+    margin: 15px;
+    margin-bottom: 50px;
     border-style: inherit;
     border-radius: 10px;
     display: inline-block;
     width: 400px;
-    height: 510px;
+    height: 550px;
     box-shadow: 1px 1px 8px black;
     border: 5px solid;
 }
@@ -65,46 +66,38 @@ body{
     border-color: rgb(253, 239, 149);
 }
 
-img{
+.img{
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: bottom;
+    align-items: center;
     width:100%;
     filter: drop-shadow(3px 6px 7px black);
 }
 
 .slowpoke{
-    height: 200px;
-    display: flex;
-    justify-content: center;
+    height: 250px;
 }
 
 .seel{
-    height: 220px;
-    display: flex;
-    justify-content: center;
-}
-.seel img{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    height: 250px;
 }
 
 .clefairy{
-    height: 200px;
+    height: 250px;
 }
 
 .chansey{
-    height: 200px;
+    height: 250px;
 }
 
 .slurpuff{
-    height: 200px;
+    height: 250px;
 }
 
 .lickitung{
-    height: 200px;
+    height: 250px;
 }
 
 h1{
@@ -139,11 +132,11 @@ h1{
     padding: 0 1.2em;
     font-family: Alegreya;
     text-shadow: 1px 1px 6px black;
+    font-size: 18.4px;
 }
 
 .buttons{
     display: flex;
-    margin: 0.8rem;
     margin-top: 0.8rem;
     text-align: center;
     padding: 0 0 0.8rem;
@@ -177,8 +170,12 @@ button:hover{
 }
 
 .details{
-    padding: 20px;
-    text-align:center
+    padding: 1rem ;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-radius: 0.8rem;
+    margin-bottom: 34%;
 }
 
 .blue{
