@@ -1,69 +1,208 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: Plus Jakarta Sans;
 }
 
 body {
-    display: flex;
-    background-image: url("bg\ image.png");
+    background-image: url(bg\ pokemon.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
 }
 
 .container {
+    border: 30px solid black;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
-    gap:20px
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+    padding: 10px;
+
 }
 
-.card{
-    flex-grow: 1;
-    flex-basis: 160px;
-    flex: 1 0 calc(25% - 20px); /*1 0 calc(33.33% - 20px) */
-    text-align: center;
+.card {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    width: 300px;
 }
 
-div {
-    column-gap: 40px;
-  }
-
-.card img{ 
-    max-width: 100%;
+.card img {
+    max-width: 80%;
     height: auto;
 }
 
-.card{
-    :hover{
-    background-image: url(hover\ bg.jpg);
-    background-size:cover;
-    background-position: center;
-    transform: scale(1.02);
-    transition: transform 0.5s;
-}}
-
-.bell { 
-    background-color: #fff599; 
+#card1 {
+    background-color: #fff599;
 }
-.char { background-color: #fdbb57; }
-.dra { background-color: #68bcf3; }
-.ee {background-color:#dbaf5c;}
-.jigg {background-color:#f1adee;}
-.meow {background-color:#c2bfa8;}
-.pik {background-color:#f5d362;}
-.rat{background-color:#cea5f0;}
-.snor{background-color:#4783f3;}
-.squi{background-color:#a3f0f3;}
-.veno{background-color:#af94ee;}
-.zubat{background-color:#9abaf5;}
 
+#card2 {
+    background-color: #fdbb57;
+}
 
-h1, .pokeball {
+#card3 {
+    background-color: #68bcf3;
+}
+
+#card4 {
+    background-color: #dbaf5c;
+}
+
+#card5 {
+    background-color: #f1adee;
+}
+
+#card6 {
+    background-color: #c2bfa8
+}
+
+#card7 {
+    background-color: #f5d362;
+}
+
+#card8 {
+    background-color: #cea5f0;
+}
+
+#card9 {
+    background-color: #4783f3;
+}
+
+#card10 {
+    background-color: #a3f0f3;
+}
+
+#card11 {
+    background-color: #af94ee;
+}
+
+#card12 {
+    background-color: #9abaf5;
+}
+
+h1 {
     display: none;
+}
+
+
+.pokeball {
+    display: none;
+    width: 120px;
+    height: 120px;
+}
+
+@media (max-width: 1015px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px auto;
+        width: 97%;
+        height: 150px;
+        padding: 15px 10px;
+        transition: ease-in-out 0.5s;
+    }
+
+    .card img {
+        max-width: 100%;
+        margin: auto;
+        width: 120px;
+        height: 120px;
+    }
+
+    .card h1 {
+        display: block;
+        flex-grow: 1;
+        text-align: center;
+        text-shadow: 1px 1px 7px rgb(0, 0, 0);
+        color: white;
+    }
+
+    .pokeball {
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin-left: 15px;
+    }
+
+    .card:hover .name {
+        background-color: rgba(0, 0, 0, 0.393);
+        border-radius: 12px;
+        padding: 5px 10px;
+        box-shadow: 1px 1px 3px black;
+        transition: background-color 0.3s;
+    }
+
+    .card:hover {
+        background-image: url(hover\ bg.gif);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 615px) {
+    .pokeball {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 4px auto;
+        width: 89%;
+        height: 80%;/*pwede adjust*/
+        padding: 15px 10px;/*pwede adjust*/
+        transition: ease-in-out 0.5s;
+    }
+
+    .card img {
+        max-width: 80%; /*pwede adjust*/
+        margin-top: 5px;
+        margin-bottom: 1px;
+        width: 250px;/*pwede adjust*/
+        height: auto;/*pwede adjust*/
+    }
+
+    .card h1 {
+        display: block;
+        flex-grow: 1;
+        text-align: center;
+        text-shadow: 1px 1px 7px rgb(0, 0, 0);
+        color: white;
+    }
+
+    .card:hover .name {
+        background-color: rgba(0, 0, 0, 0.393);
+        border-radius: 12px;
+        padding: 5px 10px;
+        box-shadow: 1px 1px 3px black;
+        transition: background-color 0.3s;
+    }
+
+    .card:hover {
+        background-image: url(hover\ bg.gif);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+    }
+
 }
