@@ -11,6 +11,7 @@ body {
     background-size: cover;
     align-items: center;
     justify-content: center;
+    padding: 50px;
 }
 
 .container {
@@ -24,20 +25,32 @@ body {
 .card{
     flex-grow: 1;
     flex-basis: 160px;
-    padding: 20px;
-    transition: border-color 0.3s;
+    flex: 1 0 calc(25% - 20px); /*1 0 calc(33.33% - 20px) */
+    text-align: center;
+    flex-direction: column;
 }
+
+div {
+    column-gap: 40px;
+  }
 
 .card img{ 
     max-width: 100%;
     height: auto;
 }
 
-.card:hover {
-    border-color: rgb(253, 239, 149);
-}
+.card{
+    :hover{
+    background-image: url(hover\ bg.jpg);
+    background-size:cover;
+    background-position: center;
+    transform: scale(1.02);
+    transition: transform 0.5s;
+}}
 
-.bell { background-color: #fff599; }
+.bell { 
+    background-color: #fff599; 
+}
 .char { background-color: #fdbb57; }
 .dra { background-color: #68bcf3; }
 .ee {background-color:#dbaf5c;}
@@ -48,6 +61,8 @@ body {
 .snor{background-color:#4783f3;}
 .squi{background-color:#a3f0f3;}
 .veno{background-color:#af94ee;}
+.zubat{background-color:#9abaf5;}
+
 
 h1, .pokeball {
     display: none;
