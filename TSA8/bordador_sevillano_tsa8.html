@@ -1,2 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Simulator</title>
+    <link rel="stylesheet" href="Bordador_Sevillano_tsa8.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="resetBtn">Reset Flexbox</button>
+            <div class="control-group">
+                <label for="gap">Gap</label>
+                <input type="number" id="gap" value="0">
+            </div>
+            <div class="control-group">
+                <label>Flex Direction</label>
+                <button id="rowBtn">Row</button>
+                <button id="columnBtn">Column</button>
+            </div>
+            <div class="control-group">
+                <label>Justify Content</label>
+                <button id="justifyStartBtn">Start</button>
+                <button id="justifyCenterBtn">Center</button>
+                <button id="justifyEndBtn">End</button>
+                <button id="justifySpaceBetweenBtn">Space Between</button>
+                <button id="justifySpaceAroundBtn">Space Around</button>
+                <button id="justifySpaceEvenlyBtn">Space Evenly</button>
+            </div>
+            <div class="control-group">
+                <label>Align Items</label>
+                <button id="alignStartBtn">Start</button>
+                <button id="alignCenterBtn">Center</button>
+                <button id="alignEndBtn">End</button>
+            </div>
+            <div class="control-group">
+                <label>Flex Grow</label>
+                <button id="growResetBtn">Reset</button>
+                <button id="growAllBtn">Grow All</button>
+                <div>
+                    <label for="box1Grow">Box 1</label>
+                    <input type="number" id="box1Grow" value="0">
+                </div>
+                <div>
+                    <label for="box2Grow">Box 2</label>
+                    <input type="number" id="box2Grow" value="0">
+                </div>
+                <div>
+                    <label for="box3Grow">Box 3</label>
+                    <input type="number" id="box3Grow" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="flexbox-container" id="flexboxContainer">
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+        </div>
+    </div>
+    <script src="Bordador_Sevillano_tsa8.js"></script>
+</body>
+</html>
