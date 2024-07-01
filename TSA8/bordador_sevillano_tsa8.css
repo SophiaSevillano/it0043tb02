@@ -1,56 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
+    padding: 0;
     margin: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
+    font-family: Be Vietnam Pro;
 }
 
-.container {
-    width: 80%;
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(225, 226, 228);
+}
+
+.main{
+    width:80%px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.controls {
-    background-color: #c346d6;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.controls .control-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.controls button, .controls input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.controls button {
-    background-color: #f7cbee;
-    color: white;
-}
-
-.controls input {
-    width: 50px;
-    text-align: center;
-}
-
-.flexbox-container {
+.container{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
@@ -65,19 +37,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(16, 11, 11);
     font-size: 20px;
     border-radius: 5px;
 }
 
 #box1 {
-    background-color: #303f9f;
+    background-color: #ffc6e3;
 }
 
 #box2 {
-    background-color: #d32f2f;
+    background-color: #f367af;
 }
 
 #box3 {
-    background-color: #388e3c;
+    background-color: #d10870;
+}
+
+.ctrlbuttons{
+    background-color: #f6b9d7;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ctrlbuttons .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ctrlbuttons button, .ctrlbuttons input{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ctrlbuttons button{
+    background-color: #d10870;
+    color: white;
+}
+
+.ctrlbuttons input{
+    width: 50px;
+    text-align: center;
 }
