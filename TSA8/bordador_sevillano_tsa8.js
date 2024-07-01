@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('grow-all').addEventListener('click', () => {
         boxes.forEach(boxId => {
             document.getElementById(boxId).style.flexGrow = growScale;
-            document.getElementById(`grow-${boxId}`).value = 1;
+            document.getElementById(`grow-${boxId}`).value = growScale;
         });
         console.log('Grow All');
     });
