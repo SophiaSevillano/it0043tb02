@@ -5,28 +5,26 @@
     font-family: Be Vietnam Pro;
 }
 
-body{
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: rgb(225, 226, 228);
 }
 
-.main{
-    width:50%;
-    height: 80%;
+.main {
+    width: 100%;
+    height: 100%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
@@ -34,17 +32,21 @@ body{
     justify-content: center;
     align-items: center;
     flex: 1;
+    width: 100%;
+    height: 100%;
 }
 
 .box {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(16, 11, 11);
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: 800;
     border-radius: 5px;
+    transition: flex-grow 0.5s ease;
 }
 
 #box1 {
@@ -59,14 +61,15 @@ body{
     background-color: #e62a8b;
 }
 
-.ctrlbuttons{
+.ctrlbuttons {
     background-color: #f6b9d7;
     color: white;
-    padding: 20px;
+    padding: 19px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .ctrlbuttons .controls {
@@ -76,31 +79,27 @@ body{
     gap: 10px;
 }
 
-.reset-btn{
-    background-color: #4CAF50;
-    color: white;
-}
-
-.boxpanel{
+.boxpanel {
     padding: 9px;
     border: none;
     border-radius: 6px;
     background-color: #f781be;
 }
 
-.ctrlbuttons button, .ctrlbuttons input{
+.ctrlbuttons button,
+.ctrlbuttons input {
     padding: 10px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
-.ctrlbuttons button{
+.ctrlbuttons button {
     background-color: #d10870;
     color: white;
 }
 
-.ctrlbuttons input{
+.ctrlbuttons input {
     width: 50px;
     text-align: center;
 }
