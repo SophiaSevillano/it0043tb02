@@ -1,116 +1,96 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flexboxContainer = document.getElementById('flexboxContainer');
-    const resetBtn = document.getElementById('resetBtn');
-    const gapInput = document.getElementById('gap');
-    const rowBtn = document.getElementById('rowBtn');
-    const columnBtn = document.getElementById('columnBtn');
-    const justifyStartBtn = document.getElementById('justifyStartBtn');
-    const justifyCenterBtn = document.getElementById('justifyCenterBtn');
-    const justifyEndBtn = document.getElementById('justifyEndBtn');
-    const justifySpaceBetweenBtn = document.getElementById('justifySpaceBetweenBtn');
-    const justifySpaceAroundBtn = document.getElementById('justifySpaceAroundBtn');
-    const justifySpaceEvenlyBtn = document.getElementById('justifySpaceEvenlyBtn');
-    const alignStartBtn = document.getElementById('alignStartBtn');
-    const alignCenterBtn = document.getElementById('alignCenterBtn');
-    const alignEndBtn = document.getElementById('alignEndBtn');
-    const growResetBtn = document.getElementById('growResetBtn');
-    const growAllBtn = document.getElementById('growAllBtn');
-    const box1GrowInput = document.getElementById('box1Grow');
-    const box2GrowInput = document.getElementById('box2Grow');
-    const box3GrowInput = document.getElementById('box3Grow');
-    const box1 = document.getElementById('box1');
-    const box2 = document.getElementById('box2');
-    const box3 = document.getElementById('box3');
+    const growScale = 0.2;
 
-    resetBtn.addEventListener('click', () => {
-        flexboxContainer.style.gap = '0px';
+    document.getElementById('reset-flexbox').addEventListener('click', () => {
         flexboxContainer.style.flexDirection = 'row';
         flexboxContainer.style.justifyContent = 'flex-start';
-        flexboxContainer.style.alignItems = 'flex-start';
-        gapInput.value = 0;
-        box1GrowInput.value = 0;
-        box2GrowInput.value = 0;
-        box3GrowInput.value = 0;
-        box1.style.flexGrow = 0;
-        box2.style.flexGrow = 0;
-        box3.style.flexGrow = 0;
+        flexboxContainer.style.alignItems = 'stretch';
+        flexboxContainer.style.gap = '10px';
     });
 
-    gapInput.addEventListener('input', () => {
-        flexboxContainer.style.gap = `${gapInput.value}px`;
+    document.getElementById('gap-value').addEventListener('input', (e) => {
+        flexboxContainer.style.gap = `${e.target.value}px`;
     });
 
-    rowBtn.addEventListener('click', () => {
+    document.getElementById('flex-row').addEventListener('click', () => {
         flexboxContainer.style.flexDirection = 'row';
+        console.log('Flex Direction: Row');
     });
 
-    columnBtn.addEventListener('click', () => {
+    document.getElementById('flex-column').addEventListener('click', () => {
         flexboxContainer.style.flexDirection = 'column';
+        console.log('Flex Direction: Column');
     });
 
-    justifyStartBtn.addEventListener('click', () => {
+    document.getElementById('start').addEventListener('click', () => {
         flexboxContainer.style.justifyContent = 'flex-start';
+        console.log('Justify Content: Start');
     });
 
-    justifyCenterBtn.addEventListener('click', () => {
+    document.getElementById('center').addEventListener('click', () => {
         flexboxContainer.style.justifyContent = 'center';
+        console.log('Justify Content: Center');
     });
 
-    justifyEndBtn.addEventListener('click', () => {
+    document.getElementById('end').addEventListener('click', () => {
         flexboxContainer.style.justifyContent = 'flex-end';
+        console.log('Justify Content: End');
     });
 
-    justifySpaceBetweenBtn.addEventListener('click', () => {
-        flexboxContainer.style.justifyContent = 'space-between';
-    });
-
-    justifySpaceAroundBtn.addEventListener('click', () => {
+    document.getElementById('space-around').addEventListener('click', () => {
         flexboxContainer.style.justifyContent = 'space-around';
+        console.log('Justify Content: Space Around');
     });
 
-    justifySpaceEvenlyBtn.addEventListener('click', () => {
+    document.getElementById('space-between').addEventListener('click', () => {
+        flexboxContainer.style.justifyContent = 'space-between';
+        console.log('Justify Content: Space Between');
+    });
+
+    document.getElementById('space-evenly').addEventListener('click', () => {
         flexboxContainer.style.justifyContent = 'space-evenly';
+        console.log('Justify Content: Space Evenly');
     });
 
-    alignStartBtn.addEventListener('click', () => {
+    document.getElementById('align-start').addEventListener('click', () => {
         flexboxContainer.style.alignItems = 'flex-start';
+        console.log('Align Items: Start');
     });
 
-    alignCenterBtn.addEventListener('click', () => {
+    document.getElementById('align-center').addEventListener('click', () => {
         flexboxContainer.style.alignItems = 'center';
+        console.log('Align Items: Center');
     });
 
-    alignEndBtn.addEventListener('click', () => {
+    document.getElementById('align-end').addEventListener('click', () => {
         flexboxContainer.style.alignItems = 'flex-end';
+        console.log('Align Items: End');
     });
 
-    growResetBtn.addEventListener('click', () => {
-        box1GrowInput.value = 0;
-        box2GrowInput.value = 0;
-        box3GrowInput.value = 0;
-        box1.style.flexGrow = 0;
-        box2.style.flexGrow = 0;
-        box3.style.flexGrow = 0;
+    const boxes = ['box1', 'box2', 'box3'];
+    
+    document.getElementById('reset-flex-grow').addEventListener('click', () => {
+        boxes.forEach(boxId => {
+            document.getElementById(boxId).style.flexGrow = 0;
+            document.getElementById(`grow-${boxId}`).value = 0;
+        });
+        console.log('Reset Flex Grow');
     });
 
-    growAllBtn.addEventListener('click', () => {
-        box1GrowInput.value = 1;
-        box2GrowInput.value = 1;
-        box3GrowInput.value = 1;
-        box1.style.flexGrow = 1;
-        box2.style.flexGrow = 1;
-        box3.style.flexGrow = 1;
+    document.getElementById('grow-all').addEventListener('click', () => {
+        boxes.forEach(boxId => {
+            document.getElementById(boxId).style.flexGrow = growScale;
+            document.getElementById(`grow-${boxId}`).value = 1;
+        });
+        console.log('Grow All');
     });
 
-    box1GrowInput.addEventListener('input', () => {
-        box1.style.flexGrow = box1GrowInput.value;
-    });
-
-    box2GrowInput.addEventListener('input', () => {
-        box2.style.flexGrow = box2GrowInput.value;
-    });
-
-    box3GrowInput.addEventListener('input', () => {
-        box3.style.flexGrow = box3GrowInput.value;
+    boxes.forEach(boxId => {
+        document.getElementById(`grow-${boxId}`).addEventListener('input', (e) => {
+            const scaledValue = e.target.value * growScale;
+            document.getElementById(boxId).style.flexGrow = scaledValue;
+            console.log(`${boxId} Flex Grow: ${scaledValue}`);
+        });
     });
 });
