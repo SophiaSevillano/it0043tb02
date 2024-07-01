@@ -15,11 +15,15 @@ body{
 }
 
 .main{
-    width:80%px;
+    width:50%;
+    height: 80%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container{
@@ -29,6 +33,7 @@ body{
     gap: 10px;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .box {
@@ -43,15 +48,15 @@ body{
 }
 
 #box1 {
-    background-color: #ffc6e3;
+    background-color: #f7cbe2;
 }
 
 #box2 {
-    background-color: #f367af;
+    background-color: #f781be;
 }
 
 #box3 {
-    background-color: #d10870;
+    background-color: #e62a8b;
 }
 
 .ctrlbuttons{
@@ -69,6 +74,18 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.reset-btn{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.boxpanel{
+    padding: 9px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f781be;
 }
 
 .ctrlbuttons button, .ctrlbuttons input{
